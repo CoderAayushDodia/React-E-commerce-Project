@@ -1,17 +1,14 @@
 import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-import UpperHeader from "./components/UpperHeader";
-import SearchBar from "./components/SearchBar";
-import Navbar from "./components/Navbar";
-import HeroSlider from "./components/HeroSlider";
-import FeaturedCategories from "./components/FeaturedCategories";
-import OfferBanner from "./components/OfferBanner";
-import PopularProducts from "./components/PopularProducts";
-import BestSeller from "./components/BestSeller";
-import Facilities from "./components/Facilities";
 import Footer from "./components/Footer";
 import ToggleMenu from "./components/ToggleMenu";
 import { useState } from "react";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import SignUpHeader from "./components/SignUpHeader";
 
 // const btnClose = document.querySelector(".btn-close");
 // const offCanvas = document.querySelector(".toggle-menu");
@@ -30,6 +27,9 @@ import { useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isSignUpPage = location.pathname === "/signup" || location.pathname === "/signin";
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -41,18 +41,16 @@ function App() {
   return (
     <div>
       <div>
-        <UpperHeader />
-        <SearchBar toggleMenu={toggleMenu} />
-        <Navbar />
-        <HeroSlider />
-        <FeaturedCategories />
-        <OfferBanner />
-        <PopularProducts />
-        <BestSeller />
-        <Facilities />
+        {isSignUpPage ? (<SignUpHeader />) : (<Header toggleMenu={toggleMenu} />)}
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+        {/* <Main /> */}
         <Footer />
         {/* {true && <ToggleMenu />} */}
-        {menuOpen && <ToggleMenu toggleMenu={toggleMenu}/>}
+        {menuOpen && <ToggleMenu toggleMenu={toggleMenu} />}
       </div>
     </div>
   );

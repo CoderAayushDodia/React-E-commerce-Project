@@ -6,7 +6,7 @@ function SearchBar({ setIsOpen, toggleMenu }) {
       <div className="container">
         <div className="w-100 align-items-center gx-0 row row1 px-lg-2 gx-0">
           <div className="col-xxl-2 col-lg-3 col-md-6 col-5">
-            <a href="#" className="d-none d-lg-block navbar-brand">
+            <a href="/" className="d-none d-lg-block navbar-brand">
               <img src="/header-images/freshcart-logo.svg" alt="Fresh Cart" />
             </a>
             <div className="d-flex justify-content-between w-100 d-lg-none">

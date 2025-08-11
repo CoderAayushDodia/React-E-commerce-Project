@@ -357,7 +357,7 @@
 }
 
 /* Facility section */
-.facility-container {
+.facility-container, .my-lg-7{
   margin: 80px 0;
 }
 
@@ -555,7 +555,7 @@ li.facebook a {
 }
 
 .menu-banner {
-  background-image: url("/menu-banner.jpg");
+  background-image: url("/header-images/menu-banner.jpg");
   height: 350px;
   /* width: 350px; */
   padding: 30px;
@@ -708,6 +708,9 @@ font-size: 12px;
   padding: 20px 0;
 }     
 
+/* Sign Up Header */
+
+
 /* Responsive Design */
 @media (max-width: 1440px) {
   .swiper-slide img {
@@ -753,7 +756,7 @@ font-size: 12px;
     flex-wrap: wrap;
   }
   .menu-banner {
-  background-image: url("/menu-banner.jpg");
+  /* background-image: url("/menu-banner.jpg"); */
   height: 500px;
   width: 100%;
   background-size: cover;
@@ -788,6 +791,9 @@ font-size: 12px;
     height: 120px;
     width: 120px;
     
+  }
+  .my-lg-7{
+    margin: 32px 0;
   }
 }
 
@@ -854,7 +860,7 @@ font-size: 12px;
   width: 350px;
 }
 .menu-banner {
-  background-image: url("/menu-banner.jpg");
+  /* background-image: url("/menu-banner.jpg"); */
   height: 350px;
   /* width: 300px; */
   padding: 30px;

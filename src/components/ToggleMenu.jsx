@@ -2,10 +2,10 @@ import React from "react";
 
 function ToggleMenu({menuOpen, toggleMenu}) {
   return (
-    <div className={`toggle-menu start-0 ${menuOpen ? "add" : ""}`}>
+    <div className={`toggle-menu start-0 d-lg-none ${menuOpen ? "add" : ""}`}>
       <div className="logo d-flex justify-content-between">
         <a className="navbar-brand" href="/">
-          <img src="/freshcart-logo.svg" alt="Fresh Cart" />
+          <img src="/header-images/freshcart-logo.svg" alt="Fresh Cart" />
         </a>
         <button className="btn btn-close" onClick={toggleMenu}></button>
       </div>
@@ -48,7 +48,7 @@ function ToggleMenu({menuOpen, toggleMenu}) {
             href="#"
             className="w-100 d-flex justify-content-center align-items-center btn btn-primary toggle-btn"
           >
-            <img src="/dashboard.png" className="me-2" alt="dashboard" />
+            <img src="/header-images/dashboard.png" className="me-2" alt="dashboard" />
             All Departments
           </button>
           <div className="submenu-wrapper">

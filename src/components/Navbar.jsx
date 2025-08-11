@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function Navbar() {
   return (
@@ -377,10 +378,10 @@ function Navbar() {
                   </a>
                   <ul className="dropdown-content">
                     <li>
-                      <a href="#">Sign In</a>
+                      <Link to="/signin">Sign In</Link>
                     </li>
                     <li>
-                      <a href="#">Sign Up</a>
+                      <Link to="/signup">Sign Up</Link>
                     </li>
                     <li>
                       <a href="#">Forgot Password</a>
