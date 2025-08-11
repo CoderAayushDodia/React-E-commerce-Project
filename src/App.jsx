@@ -9,6 +9,7 @@ import Main from "./components/Main";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import SignUpHeader from "./components/SignUpHeader";
+import ForgotPassword from "./components/ForgotPassword";
 
 // const btnClose = document.querySelector(".btn-close");
 // const offCanvas = document.querySelector(".toggle-menu");
@@ -29,7 +30,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  const isSignUpPage = location.pathname === "/signup" || location.pathname === "/signin";
+  const isSignUpPage = location.pathname === "/signup" || location.pathname === "/signin" || location.pathname === "/forgot-password";
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -46,6 +47,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
         {/* <Main /> */}
         <Footer />
