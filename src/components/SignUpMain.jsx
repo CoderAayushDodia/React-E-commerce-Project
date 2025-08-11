@@ -11,7 +11,7 @@ function SignUpMain() {
                 <img
                   src="/main-container-images/signup-g.svg"
                   alt=""
-                  class="img-fluid"
+                  className="img-fluid"
                 />
               </div>
               <div class="col-lg-4 col-md-6 col-12 order-lg-2 offset-lg-1 order-1">

@@ -8,7 +8,7 @@ function SignInMain() {
           <div className="container">
             <div className="justify-content-center align-items-center row">
               <div className="col-lg-4 col-md-6 col-12 order-lg-1 order-2">
-                <img src="/main-container-images/fp-g.svg" alt="" />
+                <img src="/main-container-images/fp-g.svg" alt="" className="img-fluid"/>
               </div>
               <div className="col-lg-4 col-md-6 col-12 order-lg-2 order-1 offset-lg-1">
                 <div className="mb-5 mb-lg-9">

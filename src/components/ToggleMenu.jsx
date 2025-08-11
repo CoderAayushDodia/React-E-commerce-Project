@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function ToggleMenu({menuOpen, toggleMenu}) {
   return (
@@ -293,10 +294,10 @@ function ToggleMenu({menuOpen, toggleMenu}) {
               <div className="submenu">
                 <ul className="dropdown-content1">
                   <li>
-                    <a href="#">Sign In</a>
+                    <Link to="/signin">Sign In</Link>
                   </li>
                   <li>
-                    <a href="#">Sign Up</a>
+                    <Link to="/signup">Sign Up</Link>
                   </li>
                   <li>
                     <a href="#">Forgot Password</a>
