@@ -3,11 +3,11 @@ import UpperHeader from "./UpperHeader";
 import SearchBar from "./SearchBar";
 import Navbar from "./Navbar";
 
-function Header({ toggleMenu }) {
+function Header({ toggleMenu, toggleSignIn }) {
   return (
     <div>
       <UpperHeader />
-      <SearchBar toggleMenu={toggleMenu} />
+      <SearchBar toggleMenu={toggleMenu} toggleSignIn={toggleSignIn}/>
       <Navbar />
     </div>
   );

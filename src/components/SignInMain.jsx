@@ -88,7 +88,7 @@ function SignInMain() {
                         Forgot password?
                         <a
                           href="/forgot-password"
-                          style={{ color: "#0AAD0A", textDecoration: "none" }}
+                          className="signin-text"
                         >
                           {" "}
                           Reset It
@@ -108,7 +108,7 @@ function SignInMain() {
                       Don’t have an account?
                       <a
                         href="/signup"
-                        style={{ color: "#0AAD0A", textDecoration: "none" }}
+                        className="signin-text"
                       >
                         {" "}
                         Sign Up

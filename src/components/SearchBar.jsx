@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBar({ setIsOpen, toggleMenu }) {
+function SearchBar({ toggleSignIn, toggleMenu }) {
   return (
     <div className="py-41">
       <div className="container">
@@ -80,7 +80,7 @@ function SearchBar({ setIsOpen, toggleMenu }) {
                   4
                 </span>
               </div>
-              <div className="text-muted list-inline-item me-3" role="button">
+              <div className="text-muted list-inline-item me-3" role="button" onClick={toggleSignIn}>
                 <span className="fav material-symbols-outlined">person</span>
               </div>
               <div

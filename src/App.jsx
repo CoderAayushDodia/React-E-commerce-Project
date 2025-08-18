@@ -10,6 +10,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import SignUpHeader from "./components/SignUpHeader";
 import ForgotPassword from "./components/ForgotPassword";
+import SignInModal from "./components/SignInModal";
 
 // const btnClose = document.querySelector(".btn-close");
 // const offCanvas = document.querySelector(".toggle-menu");
@@ -28,6 +29,7 @@ import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSignInOpen, setIsSignInOpen] = useState(false);
   const location = useLocation();
 
   const isSignUpPage = location.pathname === "/signup" || location.pathname === "/signin" || location.pathname === "/forgot-password";
@@ -37,12 +39,17 @@ function App() {
     console.log("clicked");
   };
 
+  const toggleSignIn = () => {
+    setIsSignInOpen((prev) => !prev);
+    console.log("clicked");
+  }
+
   // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
       <div>
-        {isSignUpPage ? (<SignUpHeader />) : (<Header toggleMenu={toggleMenu} />)}
+        {isSignUpPage ? (<SignUpHeader />) : (<Header toggleMenu={toggleMenu} toggleSignIn={toggleSignIn}/>)}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/signin" element={<SignIn />} />
@@ -53,6 +60,7 @@ function App() {
         <Footer />
         {/* {true && <ToggleMenu />} */}
         {menuOpen && <ToggleMenu toggleMenu={toggleMenu} />}
+        <SignInModal isOpen={isSignInOpen} toggleSignIn={toggleSignIn}/>
       </div>
     </div>
   );

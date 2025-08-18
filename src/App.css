@@ -709,7 +709,43 @@ font-size: 12px;
 }     
 
 /* Sign Up Header */
+/* User Modal */
+.modal-dialog{
+  background-color: aqua;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  z-index: 9999;  
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  opacity: 0;
+}
 
+.modal-dialog.show{
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.signin-text{
+  text-decoration: none;
+  color: #0aad0a;
+}
+
+.modal-footer{
+  padding: 12px;
+}
+
+/* Forgot password page */
+.back-btn{
+  background-color: #f0f3f2;
+}
+
+.back-btn:hover{
+  background-color: #cccfce;
+}
 
 /* Responsive Design */
 @media (max-width: 1440px) {

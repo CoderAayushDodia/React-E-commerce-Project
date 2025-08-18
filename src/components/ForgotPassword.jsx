@@ -47,9 +47,8 @@ function ForgotPassword() {
                         </button>
                         <a
                           href="/signin"
-                          className="btn btn-white"
+                          className="btn btn-white back-btn"
                           role="button"
-                          style={{border: "1px solid #ced4da"}}
                         >
                           Back
                         </a>

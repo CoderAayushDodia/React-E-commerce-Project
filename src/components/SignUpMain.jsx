@@ -113,8 +113,8 @@ function SignUpMain() {
                     <p>
                       <small>
                         By continuing, you agree to our
-                        <a href="#!" style={{ color: "#0AAD0A", textDecoration: "none" }}> Terms of Service</a> &amp;
-                        <a href="#!" style={{ color: "#0AAD0A", textDecoration: "none" }}> Privacy Policy</a>
+                        <a href="#!" className="signin-text"> Terms of Service</a> &amp;
+                        <a href="#!" className="signin-text"> Privacy Policy</a>
                       </small>
                     </p>
                   </div>

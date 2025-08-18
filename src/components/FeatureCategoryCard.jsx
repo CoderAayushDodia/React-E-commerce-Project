@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
 function FeatureCategoryCard({image, title}) {
   // const trimmedTitle = title.length > 15 ? title.substring(0, 15) + "..." : title;
