@@ -297,13 +297,14 @@
   transform: translateX(-50%) translateY(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease;
   z-index: 9;
 }
 
 .card-product:hover .card-product-action {
     opacity: 1;
     visibility: visible;
+    cursor: pointer;
 }
 
 /* Best seller section */
@@ -473,6 +474,7 @@ li.facebook a {
   transform: translateY(0);
   pointer-events: auto;
   transition-delay: 0s;
+  cursor: pointer;
 }
 
 .dropdown-content li {
@@ -582,7 +584,7 @@ li.facebook a {
 }
 
 /* Menu toggle */
-.toggle-menu {
+/* .toggle-menu {
   height: 100vh;
   position: fixed;
   width: 80vw;
@@ -590,22 +592,22 @@ li.facebook a {
   background-color: #fff;
   padding: 16px;
   z-index: 999;
-  /* visibility: visible; */
   top: 0;
   transition:left 0.3s ease;
-  /* display: none; */
   overflow-y: auto;
-}
+} */
+/* display: none; */
+/* visibility: visible; */
 
-.add{
-  /* display: block; */
+/* .add{
   left: 0;
+} */
+  /* display: block; */
   /* transition:left 0.3s ease; */
-}
 
-.btn-close:hover{
+/* .btn-close:hover{
   background-color: white !important;
-}
+} */
 
 .banner-btn a:hover {
   background-color: #088a08 !important;
@@ -745,6 +747,41 @@ font-size: 12px;
 
 .back-btn:hover{
   background-color: #cccfce;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999; /* under the menu */
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toggle-menu {
+  position: fixed;
+  top: 0;
+  left: -999px; /*hidden by default */
+  /* width: 75vw; */
+  height: 100%;
+  background: #fff;
+  z-index: 9998;
+  transition: left 0.6s ease;
+  padding: 16px
+}
+
+.toggle-menu.add {
+  left: 0; /* visible when menuOpen is true */
 }
 
 /* Responsive Design */

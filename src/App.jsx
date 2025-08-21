@@ -59,7 +59,7 @@ function App() {
         {/* <Main /> */}
         <Footer />
         {/* {true && <ToggleMenu />} */}
-        {menuOpen && <ToggleMenu toggleMenu={toggleMenu} />}
+        <ToggleMenu toggleMenu={toggleMenu} menuOpen={menuOpen}/>
         <SignInModal isOpen={isSignInOpen} toggleSignIn={toggleSignIn}/>
       </div>
     </div>

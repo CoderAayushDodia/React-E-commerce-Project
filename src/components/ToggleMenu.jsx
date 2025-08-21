@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Link} from "react-router-dom";
 
 function ToggleMenu({menuOpen, toggleMenu}) {
+  useEffect(() => {
+    if(menuOpen){
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [menuOpen])
+
   return (
-    <div className={`toggle-menu start-0 d-lg-none ${menuOpen ? "add" : ""}`}>
+    <>
+    {/* Overlay */}
+    <div className={`overlay d-lg-none ${menuOpen ? "show" : ""}`} onClick={toggleMenu}></div>
+
+    
+    <div className={`toggle-menu d-lg-none ${menuOpen ? "add" : ""}`}>
       <div className="logo d-flex justify-content-between">
         <a className="navbar-brand" href="/">
           <img src="/header-images/freshcart-logo.svg" alt="Fresh Cart" />
@@ -383,61 +396,7 @@ function ToggleMenu({menuOpen, toggleMenu}) {
         </div>
       </div>
     </div>
-    // <div
-    //   style={{
-    //     position: "fixed",
-    //     top: 0,
-    //     left: 0,
-    //     width: "250px",
-    //     height: "100vh",
-    //     backgroundColor: "rgba(0, 0, 0, 0.9)",
-    //     color: "#fff",
-    //     padding: "20px",
-    //     zIndex: 9999
-    //   }}
-    // >
-    //   <h3>Menu</h3>
-    //   <p>Some menu content</p>
-    // </div>
-    // <div
-    //   style={{
-    //     position: "fixed",
-    //     top: 0,
-    //     left: 0,
-    //     width: "250px",
-    //     height: "100vh",
-    //     backgroundColor: "#222",
-    //     color: "#fff",
-    //     padding: "20px",
-    //     zIndex: 9999,
-    //     transition: "transform 0.3s ease",
-    //     boxShadow: "2px 0 10px rgba(0,0,0,0.5)"
-    //   }}
-    // >
-    //   <button
-    //     style={{
-    //       background: "transparent",
-    //       border: "none",
-    //       color: "#fff",
-    //       fontSize: "24px",
-    //       position: "absolute",
-    //       top: "10px",
-    //       right: "10px",
-    //       cursor: "pointer"
-    //     }}
-    //     onClick={toggleMenu}
-    //   >
-    //     &times;
-    //   </button>
-
-    //   <h3>Menu</h3>
-    //   <ul style={{ listStyle: "none", padding: 0 }}>
-    //     <li style={{ margin: "15px 0" }}><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Home</a></li>
-    //     <li style={{ margin: "15px 0" }}><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Shop</a></li>
-    //     <li style={{ margin: "15px 0" }}><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Contact</a></li>
-    //     <li style={{ margin: "15px 0" }}><a href="#" style={{ color: "#fff", textDecoration: "none" }}>About</a></li>
-    //   </ul>
-    // </div>
+    </>
   );
 }
 

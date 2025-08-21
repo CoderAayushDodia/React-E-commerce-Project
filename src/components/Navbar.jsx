@@ -378,13 +378,13 @@ function Navbar() {
                   </a>
                   <ul className="dropdown-content">
                     <li>
-                      <Link to="/signin">Sign In</Link>
+                      <a href="/signin">Sign In</a>
                     </li>
                     <li>
-                      <Link to="/signup">Sign Up</Link>
+                      <a href="/signup">Sign Up</a>
                     </li>
                     <li>
-                      <a href="#">Forgot Password</a>
+                      <a href="/forgot-password">Forgot Password</a>
                     </li>
                     <li>
                       <a
